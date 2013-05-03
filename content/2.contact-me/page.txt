@@ -1,0 +1,6 @@
+title: Contact details
+-
+content:
+I am currently not for hire.
+
+I can be contacted at: <bt@kspcs.com>.

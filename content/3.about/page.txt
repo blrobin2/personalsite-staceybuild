@@ -1,0 +1,4 @@
+title: About Bennie
+-
+content: 
+Dude, I'm just a designer who likes to learn and experiment. I live in North Carolina, and I work at KS Professional Computer Solutions as Head Designer, where I mostly do mockups and minor feats of code in HTML, CSS, and sometimes *yelp* JavaScript.
