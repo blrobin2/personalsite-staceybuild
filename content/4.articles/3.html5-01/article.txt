@@ -1,0 +1,64 @@
+title: HTML5: Part 1
+-
+date: 2013, May 8
+-
+tldr:
+
+*[DRY]: Don't Repeat Yourself
+
+This generic HTML from the stock theme has got to go! Let's update the HTML to HTML5, and discuss how to semantically mark up the page. We'll also create some more partials to make our code as DRY as possible.Be warned: when we're done here, the site will have NO STYLES (okay, *some* styles). If your markup doesn't make sense without CSS, then you're doing it wrong.
+-
+content:
+
+*[DRY]: Don't Repeat Yourself
+*[CMS]: Content Management System
+*[WCAG]: Web Content Accessibility Guidelines
+
+(Before we beg)
+
+If you thought the site was bare before, we're about to go one step further and remove all the styling. That's right: no IDs, no classes, no styles, with the exception of some basic body styling to maintain readability. I'm talking:
+
+      /* Temporary Basics */
+      body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 100%;
+        line-height: 1.5em;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .strike-through {
+        text-decoration: line-through;
+      }
+
+The strike-through class is so I can make edits to articles and keep it honest. Why do this? Because we've got to ensure our architecture is sound before we thrown on a coat or two of paint. But what makes the HTML "sound" architecture?
+
+###Semantics, dude. Semantics.
+
+The word "semantics" is thrown around all the time, mostly to justify raging against designers for making choices with which the raging person disagrees. But it is important! Because, even though your site visitors won't see the markup (unless they're viewing the source, but I've never met a non-developer/designer who does this), they are not the only things reading the markup. The browser needs to understand it, search engines need to understand it, [screen readers](http://en.wikipedia.org/wiki/Screen_reader) need to understand it. 
+
+In a word, semantics makes your website "accessible."
+
+###Please. No More buzzwords!
+
+I'm sorry! The web dev field is full of buzzwords, and some of them are pretty useful shorthands for complicated ideas. Accessibilty is making sure that the web is available to as many people as possible. Groups like the WCAG were formed to help define what needs to take place in order to make the web more accessible.
+
+In fact, this is probably the biggest reason we have new HTML5 tags. In the days of HTML 4 and XHTML, we had to break down the sections of the site with divs upon divs upon divs... hey, like this site is now! We now have a whole host of tags to choose from, so that we can actually say "this section is my header" with `<header>` tags, and "this section is the main navigation" with the `<nav>` tag. And so on.
+
+Of course, with anything new comes controversy, and while HTML5 is losing some of it's "new" sheen, it's still ignored by a large number of developers who are waiting for it's "official" release date in <span class="strike-through">2020</span> EDIT: They may have moved that year closer, but it's still not today, which is when you can safely use HTML5.
+
+Another controversy is which tag to choose. My markup is relatively simple, so I'm not sweating it too much. But, I'm also open to suggestions because I do not claim to be an expert. I've been consulting [this guy](http://html5doctor.com/downloads/h5d-sectioning-flowchart.png) from [HTML5 Doctor](http://html5doctor.com/) like it's my job.
+
+### Wait, so are we going to...?
+
+We are *not* going to go through each page and discuss which things I removed, and what I kept, and how I did it. Because almost all of my choices were personal, and you can get just as much from looking at the source code at github.
+
+I will tell you that I added header and footer partials, so that I didn't have to repeat that same code on every template. Performance-wise, we're talking bytes of data, but from a DRY perspective, it's pretty helpful. Also, it's fairly standard practice for most CMS usage. 
+
+EDIT: I'm finding that certain features of Stacey do not make DRY as easy as I would like it. For example, I need to include the abbreviations at the top of each article where I am using it (in this article's case, I'm defining DRY for the article summary, as well as the article itself). Also, I can't get the header to spit out for article.html, so I've hard-coded it in for the time being. I thought it might have something to do with the page being another folder in, but it spits out the footer no problem. Hmmmmmmmm.
+
+I'm going to cut it off here for now. I feel like I rambled pretty hard last article, and I want this to actually be readable stuff. Plus, that [HTML5 Doctor](http://html5doctor.com/) site is a much better authority on this stuff than I am. So, if you're following along, think about the types of things you want to include on the site. Do you want a photo gallery? Do you want a contact form? Do you want a page dedicated to defining obscure words from the dictionary? Check out their site, figure out which tags you should use to mark that up, and get busy! BONUS: If you don't want to hard code every image, every definition, etc, you should take a look at [Stacey's documentation](http://staceyapp.com/documentation/) and see how you can make that jazz more dynamic. If you're stuck, you can check out some of the [Stacey pre-made templates](http://staceyapp.com/download-templates/) and see how they do it.
+
+If you have questions, concerns, rants (please don't rant at me), ideas, just email me (my email's on the contact details page). Later I'm going to implement a [disqus commenting system](https://disqus.com/), but priorities dictate that come... much later.
+
+Next time, we'll get into ARIA roles, structured data, and other ways we can improve accessibilty beyond using the proper HTML5 tags. The project is now linked in the footer of the site. Here's the version of the site as of this article.

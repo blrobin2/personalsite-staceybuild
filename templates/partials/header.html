@@ -15,17 +15,3 @@
       </h1>
     </header>
         :navigation
-        <article>
-          <header>
-            <h2><a href="@root_path">@title</a></h2>
-            <p>@date</p>
-          </header>
-            @content
-          <aside>
-            if $siblings do
-              :next-page
-              :previous-page
-            endif
-          </aside>
-        </article>
-:footer

@@ -78,6 +78,10 @@ a.atom-rss { margin: 0px 0px 0px 6px; padding: 1px 2px 0px; font-size: 0.93em; l
   text-decoration: line-through;
 }
 
+.summary {
+  clear: both;
+}
+
 /* Javascript-enabled styles */
 body.js-enabled p#gallery-count, body.js-enabled div#gallery-navigation { display: block; }
 body.js-enabled p#project-count { display: none; }

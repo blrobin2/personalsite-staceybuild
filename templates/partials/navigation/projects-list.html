@@ -1,14 +1,16 @@
 if $children do
-  <ul class="projects">
-    foreach $children do
-      <li class="col seven">
-        <p class="date col one">@date</p>
-        <h2 class="col five">
-          if @thumb do <img src="@thumb" class="project-thumb" alt=""> endif
-          <a href="@url">@title</a>
-        </h2>
-        if @tl;dr do <p>@tldr</p> endif
-      </li>
-    endforeach
-  </ul>
+  <nav>
+    <ul>
+      foreach $children do
+        <li>
+          <p>@date</p>
+          <h2>
+            if @thumb do <img src="@thumb" alt="tldr"> endif
+            <a href="@url">@title</a>
+          </h2>
+          if @tldr do <p>@tldr</p> endif
+        </li>
+      endforeach
+    </ul>
+  </nav>
 endif
