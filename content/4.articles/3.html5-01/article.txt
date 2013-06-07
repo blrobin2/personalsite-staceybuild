@@ -1,5 +1,6 @@
 title: HTML5: Part 1
 -
+<<<<<<< HEAD
 date: 2013, May 10
 -
 tldr: This generic HTML from the stock theme has got to go! Let's update the HTML to HTML5, and discuss how to semantically mark up the page. We'll also create some more partials to make our code as DRY as possible.Be warned: when we're done here, the site will have NO STYLES (okay, *some* styles). If your markup doesn't make sense without CSS, then you're doing it wrong.
@@ -7,6 +8,24 @@ tldr: This generic HTML from the stock theme has got to go! Let's update the HTM
 *[DRY]: Don't Repeat Yourself 
 -
 content:
+=======
+date: 2013, May 8
+-
+tldr:
+
+*[DRY]: Don't Repeat Yourself
+
+This generic HTML from the stock theme has got to go! Let's update the HTML to HTML5, and discuss how to semantically mark up the page. We'll also create some more partials to make our code as DRY as possible.Be warned: when we're done here, the site will have NO STYLES (okay, *some* styles). If your markup doesn't make sense without CSS, then you're doing it wrong.
+-
+content:
+
+*[DRY]: Don't Repeat Yourself
+*[CMS]: Content Management System
+*[WCAG]: Web Content Accessibility Guidelines
+
+(Before we beg)
+
+>>>>>>> e9f2cf9b30e914b7bdde4f00f1e1289fe81ecb80
 If you thought the site was bare before, we're about to go one step further and remove all the styling. That's right: no IDs, no classes, no styles, with the exception of some basic body styling to maintain readability. I'm talking:
 
       /* Temporary Basics */
@@ -52,6 +71,7 @@ I'm going to cut it off here for now. I feel like I rambled pretty hard last art
 
 If you have questions, concerns, rants (please don't rant at me), ideas, just email me (my email's on the contact details page). Later I'm going to implement a [disqus commenting system](https://disqus.com/), but priorities dictate that come... much later.
 
+<<<<<<< HEAD
 Next time, we'll get into ARIA roles, structured data, and other ways we can improve accessibilty beyond using the proper HTML5 tags. The project is now linked in the footer of the site. [Here's the version of the site as of this article](https://github.com/blrobin2/personalsite-staceybuild/commit/e9f2cf9b30e914b7bdde4f00f1e1289fe81ecb80).
 
 *[DRY]: Don't Repeat Yourself
@@ -61,3 +81,6 @@ Next time, we'll get into ARIA roles, structured data, and other ways we can imp
 *[CSS]: Cascading Style Sheets
 *[XHTML]: eXtensible Hyper-Text Markup Language
 *[ARIA]: Accessible Rich Internet Applications
+=======
+Next time, we'll get into ARIA roles, structured data, and other ways we can improve accessibilty beyond using the proper HTML5 tags. The project is now linked in the footer of the site. Here's the version of the site as of this article.
+>>>>>>> e9f2cf9b30e914b7bdde4f00f1e1289fe81ecb80
