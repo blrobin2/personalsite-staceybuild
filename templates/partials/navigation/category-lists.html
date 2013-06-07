@@ -1,26 +1,21 @@
 foreach $root do
   if $children do
-<<<<<<< HEAD
   <nav role="navigation">
 =======
   <nav>
->>>>>>> e9f2cf9b30e914b7bdde4f00f1e1289fe81ecb80
     <ul>
       foreach $children do
         <li>
           <p>@date</p>
           <h2>
-<<<<<<< HEAD
             if @thumb do <img src="@thumb" alt=""> endif
             <a href="@url">@title</a>
           </h2>
           if @tldr do @tldr endif
-=======
             if @thumb do <img src="@thumb" alt="tldr"> endif
             <a href="@url">@title</a>
           </h2>
           if @tldr do <p>@tldr</p> endif
->>>>>>> e9f2cf9b30e914b7bdde4f00f1e1289fe81ecb80
         </li>
       endforeach
     </ul>
