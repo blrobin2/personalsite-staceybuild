@@ -1,0 +1,12 @@
+/* Temporary Basics */
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  line-height: 1.5em;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.strike-through {
+  text-decoration: line-through;
+}

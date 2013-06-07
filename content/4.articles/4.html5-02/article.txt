@@ -1,0 +1,52 @@
+title: HTML5: Part 2
+-
+date: 2013, June 7
+-
+tldr:
+I discuss structured data and ARIA roles for accessibility. It's easier than you think!
+-
+content:
+In the previous article, we cleaned up the HTML, updated it to more semantic tags, and prepped it for this stage: structured data.
+
+Structured data is basically code you add to your HTML to add even more meaning to it. Ideally, HTML5 would have all the semantic meat you'd need. But sometimes, you might wish to get more specific than just "this is an article" or "this is a h1 title." For example, author. There is no "author" tag (you might think "cite" would work, since you're technically citing a site you've made. But "cite" is for quotes and citing the actual web source for it. (This article on "cite")[http://html5doctor.com/blockquote-q-cite/] has more details). But, say you've written an article reviewing a book. You don't want anyone to think you've written that book, so you'd need a way to specify who the author is. You could even specify the title of the book, the cover, a URL that links to the book's site, the publisher's site. And you'd do it with structured data.
+
+Right now, there are three competing structred data types, each with it's own benefits: (microformats)[http://microformats.org/], (RDFa)[http://www.w3.org/TR/xhtml-rdfa-primer/], and (microdata)[http://dev.w3.org/html5/md/]. I'm only going to talk about microdata, because I like it most and it's what I would use, because unlike the other's, microdata is actually defined in the HTML5 spec. I recommend reading about (all of the different structured data formats)[https://developers.google.com/custom-search/docs/structured_data] and deciding what works best for you.
+
+The great thing (or terrible thing, depending on your perspective) about structured data is that there is no right answer. In fact, most websites do not touch structured data, except for formatting what Googles displays when a particular page comes up in the search results, but even those people are a minority at this point. That may change in the future, but at this point, it doesn't appear as though any of these are going to deprecate anytime soon.
+
+Now, I may be extending the term too far when I say this, but another facet of semantic markup that might be considered structured data are ARIA roles.
+
+ARIA roles were developed with the intent of making HTML more understandable to screen readers and other assistive technology, so that the machine could better interpret the data for the user. Before HTML5, when there was no "nav" tag, the best-case was an unordered list with a class of "nav" or "navigation". The problem with this is that assistive technologies do not read classes, at least not in a way that they can meaningfully interpret your intent. To them, they are there as hooks for CSS and JavaScript. Which makes sense, because if you asked a machine to try and interpret all the variations on what a class could be called, you would probably be out of luck when it comes to the web. So the (WAI)[http://www.w3.org/WAI/] developed ARIA roles to add to your HTML.
+
+So, for the navigation example, the unordered list that contains your navigation, in addition to a class of your choosing, would have a role.
+
+    <ul class="nav" role="navigation">
+      <li><a href="/">Home</a></li>
+      ...
+    </ul>
+
+That way, the screenreader knows that this is where the links are that help the user navigate the site.
+
+Now, you may think that with HTML5's "nav" tag, you're off the hook. And depending on who've you read, you wouldn't be blamed for thinking this. We were told that this would be one of the benefits of the tag. But the problem at this point is that the implementation is not consistent across every browser and every screen reader. So, as a failsafe, it's a good idea to add those ARIA roles anyways. So, 
+
+    <nav role="navigation">
+      <ul>
+        <li><a href="/">Home</a></li>
+        ...
+      </ul>
+    </nav>
+
+The (list of available ARIA roles)[http://www.w3.org/TR/wai-aria/] is frickin huge and intimidating to even the most seasoned web developer. Hence, for most websites, you will not see ARIA roles added. You might see this as getting you off the hook, but if you care about making your site available to as many people as possible, you'll use these roles in your markup wherever possible. Also, in many countries, (not optimizing your site for accessibility is against the law)[http://www.w3.org/WAI/Policy/].
+
+Thankfully, there are developers out there who understand the pain of doing through the documentation and have a made a wonderful (accessibility checklist)[http://a11yproject.com/checklist.html] that will make your site that much more accessible. It's not complete, as you can always do more, but if you are a beginner to this (as most developers and designers are), this is a great place to start.
+
+That's it for now. For the next bit, we'll begin the process of adding CSS to the site. We'll take at some CSS structural theory ((OOCSS)[https://github.com/stubbornella/oocss/wiki], (SMACSS)[http://smacss.com/], and maaaayybee (BEM)[http://bem.info/]), which basically means, how we name our classes and how that helps us better organize our code.
+
+*[ARIA]: Accessible Rich Internet Applications
+*[RDFa]: Resource Description Framework in Attributes
+*[W3C]: World Wide Web Consortium
+*[WAI]: Web Accessibility Initiative
+*[CSS]: Cascading Style Sheets
+*[OOCSS]: Object-Oriented CSS
+*[SMACSS]: Scalable and Modular Architecture for CSS
+*[BEM]: Block, Element, Modifier
