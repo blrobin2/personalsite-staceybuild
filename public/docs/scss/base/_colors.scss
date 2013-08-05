@@ -1,0 +1,40 @@
+$text-color: #444;
+$primary-color: #82d6e5;
+$secondary-color: #2962a4;
+$link-color: #fff;
+$accent-color-one: tomato;
+$accent-color-two: #4fbdd7;
+
+body {
+  background: $primary-color;
+  color: $text-color;
+}
+
+h1, .h1, h2, .h2, h3, .h3 {
+  color: $secondary-color;
+}
+
+::selection {
+  background: $accent-color-one;
+  color: $link-color;
+  text-shadow: none;
+  }
+::-moz-selection {
+  background: $accent-color-one;
+  color: $link-color;
+  text-shadow: none;
+}
+
+a, a:visited {
+  color: $secondary-color;
+  text-decoration: none;
+  text-shadow: 0 1px 0 darken($primary-color, 10%);
+}
+
+a:hover, a:active {
+  text-decoration: underline;
+}
+
+.footer {
+  background: $accent-color-two;
+}

@@ -1,0 +1,51 @@
+/* Responsive Resets */
+
+* {
+  box-sizing: border-box;
+}
+
+@-o-viewport {
+  width: device-width;
+}
+@-ms-viewport {
+  width: device-width;
+}
+@viewport {
+  width: device-width;
+}
+
+html {
+  overflow-y: auto;
+}
+
+img,
+audio,
+video,
+canvas {
+  max-width: 100%;
+}
+
+figure {
+  margin: 0;
+  background: #f8f8f8;
+}
+
+figcaption {
+  padding: 0.5em 1em 1em;
+  font-size: 0.875em;
+}
+
+code {
+  padding: 0.25em 0.5em;
+  background: $accent-color-two;
+}
+
+pre {
+  background: $accent-color-two;;
+  padding: 2em;
+
+  code {
+    padding: none;
+    background: none;
+  }
+}

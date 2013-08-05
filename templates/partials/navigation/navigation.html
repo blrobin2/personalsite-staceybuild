@@ -1,9 +1,12 @@
-<nav role="navigation">
+<nav class="site-nav" role="navigation">
   <ul>
     foreach $root do
       <li>
         <a href="@url">@title</a>
       </li>
     endforeach
+      <li>
+        <a href="@root_path/?/feed/">RSS</a>
+      </li>
   </ul>
 </nav>

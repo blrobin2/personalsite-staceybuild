@@ -1,22 +1,18 @@
 foreach $root do
   if $children do
-  <nav role="navigation">
-=======
-  <nav>
+  <nav class="l-article-list" role="navigation">
     <ul>
       foreach $children do
-        <li>
-          <p>@date</p>
-          <h2>
-            if @thumb do <img src="@thumb" alt=""> endif
-            <a href="@url">@title</a>
-          </h2>
-          if @tldr do @tldr endif
-            if @thumb do <img src="@thumb" alt="tldr"> endif
-            <a href="@url">@title</a>
-          </h2>
-          if @tldr do <p>@tldr</p> endif
-        </li>
+          <li class="article-listing">
+            <a href="@url">
+            <h2 class="article-title">
+              if @thumb do <img class="article-image" src="@thumb" alt=""> endif
+              <span class="article-name">@title</span>
+            </h2>
+            if @tldr do <p class="article-summary">@tldr</p> endif
+            <p>Published @date</p>
+          </a>
+          </li>
       endforeach
     </ul>
   </nav>

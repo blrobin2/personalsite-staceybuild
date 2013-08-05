@@ -2,12 +2,7 @@ title: Stacey CMS: Part 2
 -
 date: 2013, May 8
 -
-<<<<<<< HEAD
 tldr: I go into more depth with Stacey CMS, trying to make a new template file that better serves my articles.
-=======
-tldr: 
-I go into more depth with Stacey CMS, trying to make a new template file that better serves my articles.
->>>>>>> e9f2cf9b30e914b7bdde4f00f1e1289fe81ecb80
 -
 content:
 Welcome back to Part 2 of my Stacey CMS tutorial/figuring crap out series. If you haven't read [Part 1](/articles/stacey-cms-01/), you might want to, as I'm assuming stuff from that article... you get the idea.
@@ -64,7 +59,6 @@ Okay! That's it for now. I'm making a list of things I want to do with this site
 
 So look forward to articles about all of these things! I might end up having to do a bunch of this as once, so the site might jump forward and then I'll go back and write the articles about it.
 
-<<<<<<< HEAD
 As always, [here's a link to this project on github](https://github.com/blrobin2/personalsite-staceybuild/), and [here's the most recent push](https://github.com/blrobin2/personalsite-staceybuild/commit/195cf78416ea832b3c9619408a903157c976ec10)
 
 *[tldr]: Too Long; Didn't Read
@@ -72,6 +66,3 @@ As always, [here's a link to this project on github](https://github.com/blrobin2
 *[CSS3]: Casscading Style Sheets 3
 *[OOCSS]: Object-Oriented Cascading Style Sheets
 *[SMACSS]: Scalable and Module Architecture for Cascading Style Sheets
-=======
-As always, [here's a link to this project on github](https://github.com/blrobin2/personalsite-staceybuild/), and [here's the most recent push](https://github.com/blrobin2/personalsite-staceybuild/commit/195cf78416ea832b3c9619408a903157c976ec10)
->>>>>>> e9f2cf9b30e914b7bdde4f00f1e1289fe81ecb80

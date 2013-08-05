@@ -1,0 +1,21 @@
+.article-listing {
+  clear: both;
+  list-style-type: none;
+  padding: 20px;
+  border-top: 1px solid $accent-color-two;
+  cursor: pointer;
+  @include single-transition(background-color, 0.5s, ease, 0);
+
+  &:hover, &:active {
+    background-color: darken($primary-color, 10%);
+  }
+
+  a {
+    color: $text-color;
+    text-decoration: none;
+  }
+}
+
+.article-name, .article-name a {
+  color: $secondary-color;
+}

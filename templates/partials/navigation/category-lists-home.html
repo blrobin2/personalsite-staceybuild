@@ -1,0 +1,20 @@
+foreach $root do
+  if $children do
+  <nav class="l-article-list" role="navigation">
+    <ul>
+      foreach $children[:5] do
+          <li class="article-listing">
+            <a href="@url">
+            <h2 class="article-title">
+              if @thumb do <span class="article-image">@thumb</span> endif
+              <span class="article-name">@title</span>
+            </h2>
+            if @tldr do <p class="article-summary">@tldr</p> endif
+            <p>Published @date</p>
+          </a>
+          </li>
+      endforeach
+    </ul>
+  </nav>
+  endif
+endforeach
